@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:news/shared/styles/colors.dart';
 
 import '../../models/NewsResponse.dart';
 
@@ -28,7 +29,7 @@ class NewsWidget extends StatelessWidget {
                 height: 200.h,
                 fit: BoxFit.fill,
                 placeholder: (context, url) =>
-                    Center(child: CircularProgressIndicator()),
+                    Center(child: CircularProgressIndicator(color: ColorsData.green,)),
                 errorWidget: (context, url, error) => Icon(Icons.error),
               ),
             ),
