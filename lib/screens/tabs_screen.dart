@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news/models/SourcesResponse.dart';
+import 'package:news/screens/%20widget/news_widget.dart';
 import 'package:news/screens/%20widget/tab_widget.dart';
+import 'package:news/shared/network/remote/api_manager.dart';
 
 class TabsScreen extends StatefulWidget {
   List<Sources> source;
@@ -34,7 +36,27 @@ class _TabsScreenState extends State<TabsScreen> {
                           widget.source.indexOf(e) == _currentIndex),
                     )
                     .toList(),
-              ))
+              )),
+          FutureBuilder(
+            future: ApiManager.getNews(widget.source[_currentIndex].id ?? ""),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(
+                    child: CircularProgressIndicator(
+                  color: Colors.green,
+                ));
+              }
+              if (snapshot.hasError) {
+                return Center(
+                  child: Text("somthing wrong"),
+                );
+              }
+              var data = snapshot.data?.articles ?? [];
+              return Expanded(child: ListView.builder(itemBuilder: (context, index) {
+                return NewsWidget(data[index]);
+              },itemCount: data.length,));
+            },
+          ),
         ],
       ),
     );
