@@ -51,7 +51,7 @@ class NewsWidget extends StatelessWidget {
             SizedBox(
               height: 4.h,
             ),
-            Text(article.publishedAt ?? "",
+            Text(article.publishedAt?.substring(0,10) ?? "",
                 style: TextStyle(color: Colors.grey, fontSize: 13.sp),
                 textAlign: TextAlign.end),
           ],
