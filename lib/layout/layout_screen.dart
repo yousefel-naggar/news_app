@@ -7,6 +7,8 @@ import 'package:news/screens/tabs_screen.dart';
 import 'package:news/shared/network/remote/api_manager.dart';
 import 'package:news/shared/styles/colors.dart';
 
+import '../screens/show_drawer.dart';
+
 class HomeLayout extends StatefulWidget {
   static const String routeName = "HomeLayout";
 
@@ -20,6 +22,9 @@ class _HomeLayoutState extends State<HomeLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: Drawer(
+          child: ShowDrawer(),
+        ),
       appBar: AppBar(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
