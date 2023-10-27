@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news/screens/tabs_screen.dart';
 import 'package:news/shared/network/remote/api_manager.dart';
 import 'package:news/shared/styles/colors.dart';
@@ -18,10 +19,13 @@ class HomeLayout extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         backgroundColor: ColorsData.green,
-        title: Text("News app"),
+        title: Text(
+          "News app",
+          style: GoogleFonts.exo(),
+        ),
       ),
       body: FutureBuilder(
-        future: ApiManager.getSources(),
+        future: ApiManager.getSources("general"),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
