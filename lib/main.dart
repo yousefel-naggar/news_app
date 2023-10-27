@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news/layout/layout_screen.dart';
+import 'package:news/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,8 +22,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           routes: {
             HomeLayout.routeName: (context) => HomeLayout(),
+            SplashScreen.routeName:(context) => SplashScreen()
           },
-          initialRoute: HomeLayout.routeName,
+          initialRoute: SplashScreen.routeName,
         );
       },
     );
