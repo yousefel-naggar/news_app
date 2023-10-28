@@ -22,9 +22,9 @@ class _HomeLayoutState extends State<HomeLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(
-          child: ShowDrawer(),
-        ),
+      drawer: Drawer(
+        child: ShowDrawer(sclectedScreen),
+      ),
       appBar: AppBar(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
@@ -62,6 +62,15 @@ class _HomeLayoutState extends State<HomeLayout> {
   }
 
   CategoryModel? category;
+
+  void sclectedScreen(num) {
+    if (num == 1) {
+      category=null;
+      setState(() {
+        Navigator.pop(context);
+      });
+    } else if (num == 2) {}
+  }
 
   void getSelectedCategory(cat) {
     category = cat;
