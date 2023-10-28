@@ -20,7 +20,7 @@ class CategoryScreen extends StatelessWidget {
           child: Text(
             "Pick your category of interest",
             style: GoogleFonts.poppins(
-                color: Color(0xFF4F5A69),
+                color: const Color(0xFF4F5A69),
                 fontSize: 21.sp,
                 fontWeight: FontWeight.w700),
           ),
