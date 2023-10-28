@@ -4,7 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:news/shared/styles/colors.dart';
 
 class ShowDrawer extends StatelessWidget {
-  const ShowDrawer({super.key});
+  Function selectedTab;
+
+  static const int category = 1;
+  static const int settings = 2;
+
+  ShowDrawer(this.selectedTab, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +29,11 @@ class ShowDrawer extends StatelessWidget {
         ),
       ),
       ListTile(
+        onTap: () {
+          selectedTab(category);
+        },
         minLeadingWidth: 3.w,
-        leading: Icon(
+        leading: const Icon(
           Icons.list,
           color: Color(0xFF303030),
         ),
@@ -33,13 +41,16 @@ class ShowDrawer extends StatelessWidget {
           "Categories",
           style: GoogleFonts.poppins(
               fontSize: 15.sp,
-              color: Color(0xFF303030),
+              color: const Color(0xFF303030),
               fontWeight: FontWeight.bold),
         ),
       ),
       ListTile(
+        onTap: () {
+          selectedTab(category);
+        },
         minLeadingWidth: 3.w,
-        leading: Icon(
+        leading: const Icon(
           Icons.settings,
           color: Color(0xFF303030),
         ),
@@ -47,7 +58,7 @@ class ShowDrawer extends StatelessWidget {
           "Settings",
           style: GoogleFonts.poppins(
               fontSize: 15.sp,
-              color: Color(0xFF303030),
+              color: const Color(0xFF303030),
               fontWeight: FontWeight.bold),
         ),
       ),
