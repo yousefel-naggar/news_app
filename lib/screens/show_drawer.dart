@@ -47,7 +47,7 @@ class ShowDrawer extends StatelessWidget {
       ),
       ListTile(
         onTap: () {
-          selectedTab(category);
+          selectedTab(settings);
         },
         minLeadingWidth: 3.w,
         leading: const Icon(
