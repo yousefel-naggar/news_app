@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news/models/category_model.dart';
 import 'package:news/screens/category_screen.dart';
+import 'package:news/screens/setting_screen.dart';
 import 'package:news/screens/tabs_screen.dart';
 import 'package:news/shared/network/remote/api_manager.dart';
 import 'package:news/shared/styles/colors.dart';
@@ -65,11 +66,13 @@ class _HomeLayoutState extends State<HomeLayout> {
 
   void sclectedScreen(num) {
     if (num == 1) {
-      category=null;
+      category = null;
       setState(() {
         Navigator.pop(context);
       });
-    } else if (num == 2) {}
+    } else if (num == 2) {
+      Navigator.pushNamed(context, SettingScreen.routeName);
+    }
   }
 
   void getSelectedCategory(cat) {
