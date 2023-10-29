@@ -1,0 +1,12 @@
+{
+  "appName": "NewsApp",
+  "choose": "Pick your category of interest",
+  "categories": "Categories",
+  "settings": "Settings",
+  "sports": "Sports",
+  "politics": "Politics",
+  "business": "Business",
+  "health": "Health",
+  "entertainment": "Entertainment",
+  "science": "Science"
+}
