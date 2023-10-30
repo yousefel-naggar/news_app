@@ -8,5 +8,7 @@
   "business": "أعمال",
   "health": "صحة",
   "entertainment": "ترفيه",
-  "science": "علوم"
+  "science": "علوم",
+  "newContent": "محتوى الخبر",
+  "lang": "اللغه"
 }

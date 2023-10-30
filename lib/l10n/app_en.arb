@@ -8,5 +8,7 @@
   "business": "Business",
   "health": "Health",
   "entertainment": "Entertainment",
-  "science": "Science"
+  "science": "Science",
+  "newContent": "New Content",
+  "lang": "Language"
 }
