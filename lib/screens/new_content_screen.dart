@@ -63,16 +63,21 @@ class NewContentScreen extends StatelessWidget {
             SizedBox(
               height: 4.h,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('by " ${args.author} "' ?? "",
-                    style: TextStyle(color: Colors.grey, fontSize: 13.sp),
-                    textAlign: TextAlign.start),
-                Text(args.publishedAt?.substring(0, 10) ?? "",
-                    style: TextStyle(color: Colors.grey, fontSize: 13.sp),
-                    textAlign: TextAlign.end),
-              ],
+            Text(
+              'by " ${args.author} "',
+              maxLines: 1,
+              softWrap: false,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(color: Colors.grey, fontSize: 13.sp),
+              textAlign: TextAlign.start,
+            ),
+            SizedBox(
+              height: 2.h,
+            ),
+            Text(
+              args.publishedAt ?? "",
+              style: TextStyle(color: Colors.grey, fontSize: 13.sp),
+              textAlign: TextAlign.start,
             ),
             SizedBox(
               height: 30.h,
