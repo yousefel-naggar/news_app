@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news/shared/styles/colors.dart';
@@ -20,7 +21,7 @@ class ShowDrawer extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            "News App",
+            AppLocalizations.of(context)!.appName,
             style: GoogleFonts.poppins(
                 fontSize: 23.sp,
                 color: Colors.white,
@@ -38,7 +39,7 @@ class ShowDrawer extends StatelessWidget {
           color: Color(0xFF303030),
         ),
         title: Text(
-          "Categories",
+          AppLocalizations.of(context)!.categories,
           style: GoogleFonts.poppins(
               fontSize: 15.sp,
               color: const Color(0xFF303030),
@@ -55,7 +56,7 @@ class ShowDrawer extends StatelessWidget {
           color: Color(0xFF303030),
         ),
         title: Text(
-          "Settings",
+          AppLocalizations.of(context)!.settings,
           style: GoogleFonts.poppins(
               fontSize: 15.sp,
               color: const Color(0xFF303030),

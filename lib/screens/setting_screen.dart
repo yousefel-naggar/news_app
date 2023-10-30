@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../bottom_sheets/lanuage_bottom_sheet.dart';
 import '../shared/styles/colors.dart';
 
@@ -31,7 +33,7 @@ class _SettingScreenState extends State<SettingScreen> {
           centerTitle: true,
           backgroundColor: ColorsData.green,
           title: Text(
-            "Settings",
+            AppLocalizations.of(context)!.settings,
             style: GoogleFonts.exo(
               fontSize: 20.sp,
               fontWeight: FontWeight.w300,
@@ -45,7 +47,7 @@ class _SettingScreenState extends State<SettingScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  "Language",
+                  AppLocalizations.of(context)!.lang,
                   style: GoogleFonts.poppins(
                       fontWeight: FontWeight.bold, fontSize: 18.sp),
                 ),
